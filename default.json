@@ -5,13 +5,14 @@
   "prConcurrentLimit": 5,
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "all non-major dependencies",
       "automerge": true,
-      "automergeType": "pr",
-      "matchCurrentVersion": "!/^0/"
+      "automergeType": "pr"
     },
     {
-      "matchUpdateTypes": ["minor", "major"],
+      "matchUpdateTypes": ["major"],
       "automerge": false
     }
   ],
