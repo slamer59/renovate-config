@@ -1,13 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":dependencyDashboard"],
+  "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
   "schedule": ["every weekend"],
   "prConcurrentLimit": 5,
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "minor"],
-      "matchCurrentVersion": "!/^0/",
-      "groupName": "all non-major dependencies",
       "automerge": true,
       "automergeType": "branch"
     },
