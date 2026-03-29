@@ -9,7 +9,7 @@
       "matchCurrentVersion": "!/^0/",
       "groupName": "all non-major dependencies",
       "automerge": true,
-      "automergeType": "pr"
+      "automergeType": "branch"
     },
     {
       "matchUpdateTypes": ["major"],
